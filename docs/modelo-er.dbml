@@ -1,0 +1,48 @@
+Table estudiante {
+  id bigint [pk, increment]
+  nombre varchar(120) [not null]
+  correo varchar(160) [not null, unique]
+  nivel varchar(20) [not null]
+  area_interes varchar(120)
+  creado_en timestamp [not null]
+}
+
+Table curso {
+  id bigint [pk, increment]
+  nombre varchar(160) [not null]
+  descripcion text [not null]
+  categoria varchar(80) [not null]
+  nivel varchar(20) [not null]
+  duracion_horas int [not null]
+  activo boolean [not null]
+}
+
+Table consulta {
+  id bigint [pk, increment]
+  estudiante_id bigint [not null, ref: > estudiante.id]
+  pregunta text [not null]
+  estado varchar(20) [not null]
+  creado_en timestamp [not null]
+}
+
+Table recomendacion {
+  id bigint [pk, increment]
+  consulta_id bigint [not null, unique, ref: - consulta.id]
+  respuesta text [not null]
+  creado_en timestamp [not null]
+}
+
+Table fuente {
+  id bigint [pk, increment]
+  recomendacion_id bigint [not null, ref: > recomendacion.id]
+  curso_id bigint [not null, ref: > curso.id]
+  similitud numeric(6,5) [not null]
+}
+
+Table calificacion {
+  id bigint [pk, increment]
+  recomendacion_id bigint [not null, unique, ref: - recomendacion.id]
+  puntuacion int [not null]
+  comentario text
+  creado_en timestamp [not null]
+}
