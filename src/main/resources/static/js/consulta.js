@@ -10,7 +10,7 @@ export function cargarConsulta() {
   const id = obtenerEstudianteId();
   document.getElementById("avisoSesion").textContent = id
     ? `Consultando como estudiante #${id}`
-    : "Primero regÃ­strate o entra con tu ID en la secciÃ³n Registro.";
+    : "Primero reg\u00edstrate o entra con tu ID en la secci\u00f3n Registro.";
   document.querySelector("#formConsulta button").disabled = !id;
 }
 
@@ -20,7 +20,7 @@ async function enviarConsulta(evento) {
   const pregunta = new FormData(evento.target).get("pregunta").trim();
   const resultado = document.getElementById("resultadoConsulta");
   if (!estudianteId) {
-    mostrar("mensajeConsulta", "Primero inicia sesiÃ³n.", "error");
+    mostrar("mensajeConsulta", "Primero inicia sesi\u00f3n.", "error");
     return;
   }
   if (!pregunta) {
@@ -50,11 +50,11 @@ export async function pintarResultado(consulta, contenedor) {
   const fuentes = consulta.fuentes.map((f) => {
     const curso = cursos.get(f.cursoId);
     const nombre = curso ? curso.nombre : `Curso #${f.cursoId}`;
-    return `<li><strong>${escapar(nombre)}</strong> Â· similitud ${f.similitud}</li>`;
+    return `<li><strong>${escapar(nombre)}</strong> \u00b7 similitud ${f.similitud}</li>`;
   }).join("");
   contenedor.innerHTML = `
     <div class="respuesta">
-      <h3>RecomendaciÃ³n</h3>
+      <h3>Recomendaci\u00f3n</h3>
       <p>${escapar(consulta.respuesta)}</p>
       <h4>Cursos usados como fuente</h4>
       <ul>${fuentes}</ul>

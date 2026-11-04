@@ -23,7 +23,7 @@ export function iniciarRegistro() {
     try {
       const estudiante = await api.obtenerEstudiante(id);
       guardarEstudianteId(estudiante.id);
-      mostrar("mensajeEntrar", `SesiÃ³n iniciada como ${estudiante.nombre}.`, "ok");
+      mostrar("mensajeEntrar", `Sesi\u00f3n iniciada como ${estudiante.nombre}.`, "ok");
     } catch (error) {
       mostrar("mensajeEntrar", error.message, "error");
     }

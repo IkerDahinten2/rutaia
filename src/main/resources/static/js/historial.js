@@ -8,19 +8,19 @@ export async function cargarHistorial() {
   const detalle = document.getElementById("detalleHistorial");
   detalle.innerHTML = "";
   if (!id) {
-    lista.innerHTML = `<p class="mensaje error">Primero inicia sesiÃ³n en la secciÃ³n Registro.</p>`;
+    lista.innerHTML = `<p class="mensaje error">Primero inicia sesi\u00f3n en la secci\u00f3n Registro.</p>`;
     return;
   }
   try {
     const consultas = await api.historial(id);
     if (consultas.length === 0) {
-      lista.innerHTML = "<p>TodavÃ­a no tienes consultas.</p>";
+      lista.innerHTML = "<p>Todav\u00eda no tienes consultas.</p>";
       return;
     }
     lista.innerHTML = consultas.map((c) => `
       <button class="item-historial" data-id="${c.id}">
         <span>${escapar(c.pregunta)}</span>
-        <small>${escapar(c.estado)} Â· ${new Date(c.creadoEn).toLocaleString()}</small>
+        <small>${escapar(c.estado)} \u00b7 ${new Date(c.creadoEn).toLocaleString()}</small>
       </button>`).join("");
     lista.querySelectorAll(".item-historial").forEach((boton) => {
       boton.addEventListener("click", async () => {
