@@ -8,16 +8,20 @@
 </head>
 <body>
   <header>
-    <h1>RutaIA</h1>
+    <div class="marca">
+      <h1>Ruta<span>IA</span></h1>
+      <p class="lema">Tu ruta de aprendizaje, guiada por inteligencia artificial</p>
+    </div>
     <nav>
       <button data-vista="registro" class="activo">Registro</button>
-      <button data-vista="catalogo">CatÃ¡logo</button>
+      <button data-vista="catalogo">Cat&aacute;logo</button>
       <button data-vista="consulta">Consulta</button>
       <button data-vista="historial">Historial</button>
-      <button data-vista="estadisticas">EstadÃ­sticas</button>
+      <button data-vista="estadisticas">Estad&iacute;sticas</button>
     </nav>
   </header>
   <main>
+    <p class="intro">Describe lo que quieres aprender y te recomendamos cursos reales de la instituci&oacute;n.</p>
     <section id="registro" class="vista activa">
       <h2>Registro de estudiante</h2>
       <form id="formRegistro">
@@ -28,7 +32,7 @@
           <option value="Intermedio">Intermedio</option>
           <option value="Avanzado">Avanzado</option>
         </select>
-        <input name="areaInteres" placeholder="Ãrea de interÃ©s">
+        <input name="areaInteres" placeholder="&Aacute;rea de inter&eacute;s">
         <button type="submit">Registrarme</button>
       </form>
       <p class="mensaje" id="mensajeRegistro"></p>
@@ -40,14 +44,14 @@
       <p class="mensaje" id="mensajeEntrar"></p>
     </section>
     <section id="catalogo" class="vista">
-      <h2>CatÃ¡logo</h2>
+      <h2>Cat&aacute;logo de cursos</h2>
       <div class="filtros">
         <select id="filtroCategoria">
-          <option value="">Todas las categorÃ­as</option>
+          <option value="">Todas las categor&iacute;as</option>
         </select>
         <select id="filtroNivel">
           <option value="">Todos los niveles</option>
-          <option value="BÃ¡sico">BÃ¡sico</option>
+          <option value="B&aacute;sico">B&aacute;sico</option>
           <option value="Intermedio">Intermedio</option>
           <option value="Avanzado">Avanzado</option>
         </select>
@@ -58,7 +62,7 @@
       <h2>Nueva consulta</h2>
       <p class="aviso" id="avisoSesion"></p>
       <form id="formConsulta">
-        <textarea name="pregunta" rows="3" placeholder="Ej: quiero aprender a crear pÃ¡ginas web sin saber programar"></textarea>
+        <textarea name="pregunta" rows="3" placeholder="Ej: quiero aprender a crear p&aacute;ginas web sin saber programar"></textarea>
         <button type="submit">Buscar cursos</button>
       </form>
       <p class="mensaje" id="mensajeConsulta"></p>
@@ -70,7 +74,7 @@
       <div id="detalleHistorial"></div>
     </section>
     <section id="estadisticas" class="vista">
-      <h2>EstadÃ­sticas</h2>
+      <h2>Estad&iacute;sticas</h2>
       <div id="tarjetasEstadisticas" class="tarjetas"></div>
     </section>
   </main>
