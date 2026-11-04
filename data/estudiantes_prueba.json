@@ -1,0 +1,12 @@
+[
+  {"nombre": "Ana Garcia", "correo": "ana.garcia@correo.com", "nivel": "Principiante", "areaInteres": "Desarrollo web"},
+  {"nombre": "Luis Perez", "correo": "luis.perez@correo.com", "nivel": "Intermedio", "areaInteres": "Bases de datos"},
+  {"nombre": "Maria Lopez", "correo": "maria.lopez@correo.com", "nivel": "Avanzado", "areaInteres": "Inteligencia artificial"},
+  {"nombre": "Carlos Ruiz", "correo": "carlos.ruiz@correo.com", "nivel": "Principiante", "areaInteres": "Programacion"},
+  {"nombre": "Sofia Morales", "correo": "sofia.morales@correo.com", "nivel": "Intermedio", "areaInteres": "Automatizacion"},
+  {"nombre": "Diego Castillo", "correo": "diego.castillo@correo.com", "nivel": "Avanzado", "areaInteres": "Desarrollo web"},
+  {"nombre": "Laura Mendez", "correo": "laura.mendez@correo.com", "nivel": "Principiante", "areaInteres": "Bases de datos"},
+  {"nombre": "Jorge Ramirez", "correo": "jorge.ramirez@correo.com", "nivel": "Intermedio", "areaInteres": "Programacion"},
+  {"nombre": "Paula Soto", "correo": "paula.soto@correo.com", "nivel": "Avanzado", "areaInteres": "Inteligencia artificial"},
+  {"nombre": "Andres Vega", "correo": "andres.vega@correo.com", "nivel": "Principiante", "areaInteres": "Automatizacion"}
+]
