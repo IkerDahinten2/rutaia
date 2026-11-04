@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RutaIA</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header>
+    <div class="marca">
+      <h1>Ruta<span>IA</span></h1>
+      <p class="lema">Tu ruta de aprendizaje, guiada por inteligencia artificial</p>
+    </div>
+    <nav>
+      <button data-vista="registro" class="activo">Registro</button>
+      <button data-vista="catalogo">Cat&aacute;logo</button>
+      <button data-vista="consulta">Consulta</button>
+      <button data-vista="historial">Historial</button>
+      <button data-vista="estadisticas">Estad&iacute;sticas</button>
+    </nav>
+  </header>
+  <main>
+    <p class="intro">Describe lo que quieres aprender y te recomendamos cursos reales de la instituci&oacute;n.</p>
+    <section id="registro" class="vista activa">
+      <h2>Registro de estudiante</h2>
+      <form id="formRegistro">
+        <input name="nombre" placeholder="Nombre" required>
+        <input name="correo" type="email" placeholder="Correo" required>
+        <select name="nivel" required>
+          <option value="Principiante">Principiante</option>
+          <option value="Intermedio">Intermedio</option>
+          <option value="Avanzado">Avanzado</option>
+        </select>
+        <input name="areaInteres" placeholder="&Aacute;rea de inter&eacute;s">
+        <button type="submit">Registrarme</button>
+      </form>
+      <p class="mensaje" id="mensajeRegistro"></p>
+      <h3>Ya tengo cuenta</h3>
+      <form id="formEntrar">
+        <input name="id" type="number" min="1" placeholder="Mi ID de estudiante" required>
+        <button type="submit">Entrar</button>
+      </form>
+      <p class="mensaje" id="mensajeEntrar"></p>
+    </section>
+    <section id="catalogo" class="vista">
+      <h2>Cat&aacute;logo de cursos</h2>
+      <div class="filtros">
+        <select id="filtroCategoria">
+          <option value="">Todas las categor&iacute;as</option>
+        </select>
+        <select id="filtroNivel">
+          <option value="">Todos los niveles</option>
+          <option value="B&aacute;sico">B&aacute;sico</option>
+          <option value="Intermedio">Intermedio</option>
+          <option value="Avanzado">Avanzado</option>
+        </select>
+      </div>
+      <div id="listaCursos" class="tarjetas"></div>
+    </section>
+    <section id="consulta" class="vista">
+      <h2>Nueva consulta</h2>
+      <p class="aviso" id="avisoSesion"></p>
+      <form id="formConsulta">
+        <textarea name="pregunta" rows="3" placeholder="Ej: quiero aprender a crear p&aacute;ginas web sin saber programar"></textarea>
+        <button type="submit">Buscar cursos</button>
+      </form>
+      <p class="mensaje" id="mensajeConsulta"></p>
+      <div id="resultadoConsulta"></div>
+    </section>
+    <section id="historial" class="vista">
+      <h2>Historial</h2>
+      <div id="listaHistorial"></div>
+      <div id="detalleHistorial"></div>
+    </section>
+    <section id="estadisticas" class="vista">
+      <h2>Estad&iacute;sticas</h2>
+      <div id="tarjetasEstadisticas" class="tarjetas"></div>
+    </section>
+  </main>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
