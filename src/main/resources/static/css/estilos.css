@@ -1,0 +1,42 @@
+:root {
+  --primario: #2563eb;
+  --fondo: #f5f7fb;
+  --texto: #1f2937;
+  --borde: #d1d5db;
+  --ok: #15803d;
+  --error: #b91c1c;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, sans-serif; background: var(--fondo); color: var(--texto); }
+header { background: #fff; padding: 1rem; border-bottom: 1px solid var(--borde); }
+h1 { margin: 0 0 0.5rem; font-size: 1.5rem; }
+nav { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+nav button { padding: 0.5rem 0.9rem; border: 1px solid var(--borde); background: #fff; border-radius: 8px; cursor: pointer; font: inherit; }
+nav button.activo { background: var(--primario); color: #fff; border-color: var(--primario); }
+main { max-width: 960px; margin: 0 auto; padding: 1rem; }
+.vista { display: none; }
+.vista.activa { display: block; }
+form { display: flex; flex-direction: column; gap: 0.6rem; max-width: 480px; margin-bottom: 1.5rem; }
+input, select, textarea, button { font: inherit; padding: 0.6rem; border: 1px solid var(--borde); border-radius: 8px; }
+button[type="submit"] { background: var(--primario); color: #fff; border: none; cursor: pointer; }
+button:disabled { opacity: 0.5; cursor: not-allowed; }
+.filtros { display: flex; gap: 0.6rem; flex-wrap: wrap; margin-bottom: 1rem; }
+.tarjetas { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 1rem; }
+.tarjeta { background: #fff; border: 1px solid var(--borde); border-radius: 12px; padding: 1rem; }
+.tarjeta h3 { margin-top: 0; font-size: 1.05rem; }
+.cifra { font-size: 1.8rem; font-weight: 700; margin: 0; color: var(--primario); }
+.respuesta { background: #fff; border-left: 4px solid var(--primario); padding: 1rem; border-radius: 8px; margin-bottom: 1rem; }
+.respuesta ul { padding-left: 1.2rem; }
+.item-historial { display: flex; flex-direction: column; align-items: flex-start; width: 100%; margin-bottom: 0.5rem; background: #fff; text-align: left; cursor: pointer; }
+.item-historial small { color: #6b7280; }
+.calificacion { background: #fff; border: 1px solid var(--borde); padding: 1rem; border-radius: 8px; max-width: 100%; }
+.mensaje { min-height: 1.2rem; }
+.ok { color: var(--ok); }
+.error { color: var(--error); }
+.info { color: #374151; }
+.aviso { color: #6b7280; font-size: 0.9rem; }
+@media (max-width: 600px) {
+  h1 { font-size: 1.2rem; }
+  nav button { flex: 1 1 40%; }
+  form { max-width: 100%; }
+}
