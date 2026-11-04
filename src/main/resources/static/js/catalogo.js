@@ -25,8 +25,8 @@ function pintar(cursos) {
     <article class="tarjeta">
       <h3>${escapar(c.nombre)}</h3>
       <p>${escapar(c.descripcion)}</p>
-      <p><strong>CategorÃ­a:</strong> ${escapar(c.categoria)}</p>
-      <p><strong>Nivel:</strong> ${escapar(c.nivel)} Â· ${c.duracionHoras} h</p>
+      <p><strong>Categor\u00eda:</strong> ${escapar(c.categoria)}</p>
+      <p><strong>Nivel:</strong> ${escapar(c.nivel)} \u00b7 ${c.duracionHoras} h</p>
     </article>`).join("");
 }
 

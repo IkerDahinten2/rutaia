@@ -13,8 +13,8 @@ export async function cargarEstadisticas() {
       ["Consultas totales", e.totalConsultas],
       ["Respondidas", e.respondidas],
       ["Sin resultados", e.sinResultados],
-      ["Promedio de calificaciÃ³n", Number(e.promedioCalificacion).toFixed(2)],
-      ["Curso mÃ¡s recomendado", top]
+      ["Promedio de calificaci\u00f3n", Number(e.promedioCalificacion).toFixed(2)],
+      ["Curso m\u00e1s recomendado", top]
     ];
     contenedor.innerHTML = datos.map(([titulo, valor]) => `
       <article class="tarjeta">
