@@ -1,0 +1,19 @@
+{
+  "info": {
+    "name": "RutaIA",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "baseUrl", "value": "http://localhost:8080" }
+  ],
+  "item": [
+    { "name": "Health", "request": { "method": "GET", "url": "{{baseUrl}}/api/health" } },
+    { "name": "Registrar estudiante", "request": { "method": "POST", "header": [ { "key": "Content-Type", "value": "application/json" } ], "body": { "mode": "raw", "raw": "{\"nombre\":\"Ana Prueba\",\"correo\":\"ana.prueba@correo.com\",\"nivel\":\"Principiante\",\"areaInteres\":\"Web\"}" }, "url": "{{baseUrl}}/api/estudiantes" } },
+    { "name": "Listar estudiantes", "request": { "method": "GET", "url": "{{baseUrl}}/api/estudiantes" } },
+    { "name": "Catalogo filtrado", "request": { "method": "GET", "url": "{{baseUrl}}/api/catalogo?nivel=Avanzado" } },
+    { "name": "Crear consulta", "request": { "method": "POST", "header": [ { "key": "Content-Type", "value": "application/json" } ], "body": { "mode": "raw", "raw": "{\"estudianteId\":1,\"pregunta\":\"quiero aprender a crear paginas web sin saber programar\"}" }, "url": "{{baseUrl}}/api/consultas" } },
+    { "name": "Historial de estudiante", "request": { "method": "GET", "url": "{{baseUrl}}/api/estudiantes/1/historial" } },
+    { "name": "Calificar recomendacion", "request": { "method": "POST", "header": [ { "key": "Content-Type", "value": "application/json" } ], "body": { "mode": "raw", "raw": "{\"puntuacion\":5,\"comentario\":\"Util\"}" }, "url": "{{baseUrl}}/api/recomendaciones/1/calificacion" } },
+    { "name": "Estadisticas", "request": { "method": "GET", "url": "{{baseUrl}}/api/estadisticas" } }
+  ]
+}
