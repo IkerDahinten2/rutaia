@@ -10,6 +10,7 @@ public record ConsultaResponse(
         String pregunta,
         String estado,
         LocalDateTime creadoEn,
+        Long recomendacionId,
         String respuesta,
         List<FuenteResponse> fuentes) {
 
@@ -18,10 +19,12 @@ public record ConsultaResponse(
 
     public static ConsultaResponse desde(Consulta c) {
         Recomendacion r = c.getRecomendacion();
+        Long recomendacionId = r == null ? null : r.getId();
         String respuesta = r == null ? null : r.getRespuesta();
         List<FuenteResponse> fuentes = r == null ? List.of() : r.getFuentes().stream()
                 .map(f -> new FuenteResponse(f.getCursoId(), f.getSimilitud()))
                 .toList();
-        return new ConsultaResponse(c.getId(), c.getEstudianteId(), c.getPregunta(), c.getEstado(), c.getCreadoEn(), respuesta, fuentes);
+        return new ConsultaResponse(c.getId(), c.getEstudianteId(), c.getPregunta(), c.getEstado(),
+                c.getCreadoEn(), recomendacionId, respuesta, fuentes);
     }
 }
